@@ -8,9 +8,22 @@
 </head>
 <body>
 
-<button id="start">Go</button>
+<div id='overlay'></div>
+<div id="aboutbox">
+  <h2>About</h2>
+  <p>This page contains a deliberately written <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a> to demonstrate the behaviour of such a system.</p>
+  
+  <p>Clicking "Get a quote!" will fire off two API calls to <a href="https://en.wikiquote.org/wiki/Main_Page">Wikiquote</a>, each for a different TV series. Each call is written so that on successful excecution, it will block the other. In this case the first call to run "wins" and displays upon the page.</p>
+  
+  <button id="aboutclose">Close</button>
+  
+</div>
+
+<button id="start">Get a quote!</button>
 <div id="results">
 </div>
+
+<button id="about">About</button>
 
 </body>
 </html>
